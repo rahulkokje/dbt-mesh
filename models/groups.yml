@@ -1,0 +1,14 @@
+groups:
+  - name: finance
+    owner:
+      name: Jon Doe
+      email: finance@jaffleshop.com
+      slack: finance-data-public
+      github: finance-data-team
+  
+  - name: product
+    owner:
+      name: Robert Downy Jr
+      email: product@jaffleshop.com
+      slack: product-data-public
+      github: product-data-team
