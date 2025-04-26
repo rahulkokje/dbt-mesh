@@ -28,6 +28,7 @@ models:
     config:
       contract:
         enforced: true
+    latest_version: 1
     columns:
       - name: order_id
         data_type: string
@@ -57,7 +58,19 @@ models:
         data_type: int64
       - name: ordered_year
         data_type: int64
-  
+    versions:
+      - v: 1
+        config:
+          alias: fct_orders
+      - v: 2
+        columns:
+          - include: all
+            exclude: [order_total]
+          - name: order_amount
+            data_type: numeric
+          - name: location_opened_at
+            data_type: date
+
   - name: fct_order_items
     config:
       contract:
