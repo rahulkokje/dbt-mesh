@@ -1,7 +1,9 @@
 models:
   - name: dim_product_supplies
     description: Product supply information
+    access: public
     config:
+      group: product
       contract:
         enforced: true
     columns:
@@ -25,7 +27,9 @@ models:
         data_type: numeric
 
   - name: fct_orders
+    access: public
     config:
+      group: finance
       contract:
         enforced: true
     latest_version: 1
